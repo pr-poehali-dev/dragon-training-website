@@ -32,8 +32,17 @@ const InstructorsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-transparent to-dragon-scale/10">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-6 bg-gradient-to-b from-transparent to-dragon-scale/10 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto relative">
+        {/* Декоративный дракон */}
+        <div className="absolute top-0 right-0 w-96 h-96 opacity-20 pointer-events-none hidden lg:block">
+          <img
+            src="https://cdn.poehali.dev/files/7d1de9fc-fafe-4dd8-924a-4ddd87de1d88.png"
+            alt="Декоративный дракон"
+            className="w-full h-full object-contain"
+          />
+        </div>
+
         <div className="text-center mb-16">
           <h2 className="text-5xl font-oswald font-bold mb-6">
             <span className="text-white">НАШИ</span>
@@ -45,7 +54,7 @@ const InstructorsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {instructors.map((instructor, index) => (
             <InstructorCard key={index} {...instructor} />
           ))}
