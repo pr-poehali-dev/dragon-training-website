@@ -4,8 +4,17 @@ import Icon from "@/components/ui/icon";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dragon-red/20 via-dragon-scale to-black" />
+      {/* Dragon Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2000&auto=format&fit=crop")',
+        }}
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dragon-red/40 via-dragon-scale/60 to-black/80" />
 
       {/* Dragon Silhouette */}
       <div className="absolute top-10 right-10 opacity-20">
